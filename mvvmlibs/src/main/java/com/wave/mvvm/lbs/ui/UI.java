@@ -12,7 +12,12 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.lifecycle.ViewModelStoreOwner;
 import com.wave.mvvm.lbs.ui.vm.MVVMViewModel;
 
-
+/**
+ * MvvM UI 构建器
+ * 支持 Activity 与 Fragment
+ * @param <V>
+ * @param <B>
+ */
 public class UI<V extends MVVMViewModel,B extends ViewDataBinding> {
 
     protected V viewModel;
