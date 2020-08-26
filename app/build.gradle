@@ -1,5 +1,4 @@
 apply plugin: 'com.android.application'
-//apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 30
@@ -63,8 +62,8 @@ dependencies {
     // optional - Guava support for Room, including Optional and ListenableFuture
     api "androidx.room:room-guava:$room_version"
 
-    implementation project(":lib")
-    implementation project(":mvvmlibs")
-
+    //implementation project(":lib")
+    //implementation project(":mvvmlibs")
+    implementation 'com.github.wave-zhang:mvvmlibs:0.0.1'
 
 }
