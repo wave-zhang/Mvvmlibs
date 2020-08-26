@@ -1,0 +1,4 @@
+include ':lib'
+include ':mvvmlibs'
+include ':app'
+rootProject.name = "MvvmDemo"
