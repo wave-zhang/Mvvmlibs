@@ -5,7 +5,7 @@ group='com.github.wave-zhang'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.1"
+    buildToolsVersion "29.0.2"
 
     defaultConfig {
         minSdkVersion 16

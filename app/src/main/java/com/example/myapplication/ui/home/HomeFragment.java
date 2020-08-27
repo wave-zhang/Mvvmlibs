@@ -16,13 +16,13 @@ public class HomeFragment extends MVVMFragment implements OnHomeListener {
     protected UI<HomeViewModel,FragmentHomeBinding> ui;
 
     @Override
-    public UI<HomeViewModel,FragmentHomeBinding> onCreateUI() {
+    public UI onCreateUI() {
         return ui = new UI.Builder<HomeViewModel, FragmentHomeBinding>()
                 .setViewModelClass(HomeViewModel.class)
                 .setLayoutId(R.layout.fragment_home)
                 .setVariableId(BR.vmHome)
+                .setCacheView(true)
                 .build();
-        //return new UI(R.layout.fragment_home,BR.vmHome,HomeViewModel.class);
     }
 
     public UI<HomeViewModel, FragmentHomeBinding> getUi() {
@@ -31,11 +31,7 @@ public class HomeFragment extends MVVMFragment implements OnHomeListener {
 
     @Override
     public void onCreateViewAfter() {
-//        ui.getViewModel().listenerLiveData.setValue(this);
-//        ui.getViewModel().textLiveData.setValue("这是一条假数据");
-//        HomeViewModel viewModel = (HomeViewModel)ui.getViewModel();
-//        viewModel.setListener(this);
-//        viewModel.textLiveData.setValue("这是一条假数据");
+        ui.getViewModel().listenerLiveData.setValue(this);
     }
 
     @Override
